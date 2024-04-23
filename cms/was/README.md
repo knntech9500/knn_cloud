@@ -51,6 +51,9 @@ spec:
 6. kubectl get service -n springtest
 7. kubectl get pods -n springtest
 8. kubectl exec -it <컨테이너ID> /bin/bash
+9. 
 tomcat 404 에러 발생시
-```mv ./webapps ./webapps2
-```mv ./webapps.dist ./webapps
+```
+mv ./webapps ./webapps2
+mv ./webapps.dist ./webapps
+```
