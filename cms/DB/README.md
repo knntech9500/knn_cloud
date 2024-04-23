@@ -67,4 +67,8 @@ spec:
             storage: 2Gi
 ```
 
-3. kubectl apply -f db_deployment.yaml
+3. yaml 배포
+```
+kubectl apply -f db_deployment.yaml
+```
+4.
