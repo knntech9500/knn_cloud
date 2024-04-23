@@ -2,29 +2,32 @@
 1. sudo podman pull tomcat:9.0.55-jdk11
 2. was_tom.yaml
  ```yaml
-   apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-     name: was-test6
-     namespace: springtest
-   spec:
-     replicas: 2
-     selector:
-       matchLabels:
-         app: was-app
-     template:
-       metadata:
-         labels:
-           app: was-app
-       spec:
-         containers:
-         - name: lanzam-was6
-           image: harbor.192.168.118.138.nip.io/test/was:v1
-           command: ["/bin/sh", "-ec", "while :; do echo 'Hello World'; sleep 5 ; done"]
-           ports:
-           - containerPort: 8080
-         imagePullSecrets:
-           - name: harbor-credentials
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+  namespace: springtest
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - name: tomcat
+        image: tomcat:9.0.55-jdk11
+        ports:
+        - containerPort: 8080
+        env:
+        - name: TOMCAT_USERNAME
+          value: admin
+        - name: TOMCAT_PASSWORD
+          value: admin123
+
    ```
 
 
