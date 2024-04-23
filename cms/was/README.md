@@ -2,9 +2,9 @@
 1. sudo podman pull tomcat:9.0.55-jdk11
 2. was_tom.yaml
 3. was_tomservice.yaml
-4. '''
+4. ```
 5. asdasd
-6. '''
+6. ```
 7. kubectl get apply -f was_tom.yaml
 8. kubectl get apply -f was_tomservice.yaml
 9. kubectl get service -n springtest
