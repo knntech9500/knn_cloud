@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
         - name: postgresql
-          image: harbor.192.168.118.138.nip.io/test/postgres:v2
+          image: docker.io/library/postgres:latest
           ports:
             - containerPort: 5432
           env:
