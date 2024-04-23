@@ -1,6 +1,6 @@
 ## was 설치 및 배포
 1. sudo podman pull tomcat:9.0.55-jdk11
-2. was_tom.yaml
+2. was deployment 작성
  ```yaml
 apiVersion: apps/v1
 kind: Deployment
