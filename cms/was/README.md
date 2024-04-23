@@ -29,7 +29,23 @@ spec:
           value: admin123
 
    ```
-
+3. was_tomservice.yaml
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-service
+  namespace: springtest
+spec:
+  selector:
+    app: tomcat
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+    nodePort: 30300
+  type: NodePort
+```
 
 
 
