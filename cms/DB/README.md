@@ -71,4 +71,37 @@ spec:
 ```
 kubectl apply -f db_deployment.yaml
 ```
-4.
+4. service 및 컨테이너 배포 확인
+```
+kubectl get service -n springtest
+kubectl get statefulset -n springtest
+```
+5. 컨테이너 접속
+```
+kubectl exec -it <컨테이너ID> /bin/bash
+```
+6. sql 접속
+```
+qsql -U knn -d dbtest
+```
+7. 계정 정보 확인
+```
+\du
+```
+8. 테이블 접근
+```
+\c dbtest knn
+```
+9. 테이블 생성
+```
+CREATE TABLE star (
+id integer NOT NULL,
+name character varying(255),
+class character varying(32),
+age integer,
+radius integer,
+lum integer,
+magnt integer,
+CONSTRAINT star_pk PRIMARY KEY (id)
+);
+```
