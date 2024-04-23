@@ -1,10 +1,10 @@
 ## DB 설치 및 이중화
-이미지 가져오기
+1. 이미지 가져오기
 ```
 sudo podman pull postgresql:latest
 ```
 
-db_deployment.yaml
+2. db_deployment.yaml 작성
 ```yaml
 apiVersion: v1
 kind: Service
@@ -66,3 +66,5 @@ spec:
           requests:
             storage: 2Gi
 ```
+
+3. kubectl apply -f db_deployment.yaml
