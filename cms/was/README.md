@@ -46,15 +46,11 @@ spec:
     nodePort: 30300
   type: NodePort
 ```
-
-
-
-5. asdasd
-6. ```
-7. kubectl get apply -f was_tom.yaml
-8. kubectl get apply -f was_tomservice.yaml
-9. kubectl get service -n springtest
-10. kubectl get pods -n springtest
-11. kubectl exec -it <컨테이너ID> /bin/bash
-12. mv ./webapps ./webapps2
-13. mv ./webapps.dist ./webapps
+4. kubectl get apply -f was_tom.yaml
+5. kubectl get apply -f was_tomservice.yaml
+6. kubectl get service -n springtest
+7. kubectl get pods -n springtest
+8. kubectl exec -it <컨테이너ID> /bin/bash
+tomcat 404 에러 발생시
+```mv ./webapps ./webapps2
+```mv ./webapps.dist ./webapps
