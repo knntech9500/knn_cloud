@@ -2,7 +2,7 @@
 1. sudo podman pull tomcat:9.0.55-jdk11
 2. was_tom.yaml
 3. was_tomservice.yaml
-4. ```
+4. ```yaml
    apiVersion: apps/v1
    kind: Deployment
    metadata:
