@@ -55,5 +55,7 @@ spec:
 tomcat 404 에러 발생시
 ```
 mv ./webapps ./webapps2
+```
+```
 mv ./webapps.dist ./webapps
 ```
