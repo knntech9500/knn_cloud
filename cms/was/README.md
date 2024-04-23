@@ -4,28 +4,31 @@
 3. was_tomservice.yaml
 4. ```
    apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: was-test6
-  namespace: springtest
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: was-app
-  template:
-    metadata:
-      labels:
-        app: was-app
-    spec:
-      containers:
-      - name: lanzam-was6
-        image: harbor.192.168.118.138.nip.io/test/was:v1
-        command: ["/bin/sh", "-ec", "while :; do echo 'Hello World'; sleep 5 ; done"]
-        ports:
-        - containerPort: 8080
-      imagePullSecrets:
-        - name: harbor-credentials
+   kind: Deployment
+   metadata:
+     name: was-test6
+     namespace: springtest
+   spec:
+     replicas: 2
+     selector:
+       matchLabels:
+         app: was-app
+     template:
+       metadata:
+         labels:
+           app: was-app
+       spec:
+         containers:
+         - name: lanzam-was6
+           image: harbor.192.168.118.138.nip.io/test/was:v1
+           command: ["/bin/sh", "-ec", "while :; do echo 'Hello World'; sleep 5 ; done"]
+           ports:
+           - containerPort: 8080
+         imagePullSecrets:
+           - name: harbor-credentials
+   ```
+
+
 
 
 5. asdasd
