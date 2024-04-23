@@ -82,7 +82,7 @@ kubectl exec -it <컨테이너ID> /bin/bash
 ```
 6. sql 접속
 ```
-qsql -U knn -d dbtest
+psql -U knn -d dbtest
 ```
 7. 계정 정보 확인
 ```
@@ -104,4 +104,32 @@ lum integer,
 magnt integer,
 CONSTRAINT star_pk PRIMARY KEY (id)
 );
+```
+10. 테이블 생성 확인
+```
+\dt
+```
+11. pod 삭제
+```
+kubectl delete statefulset -n springtest <테이블 생성한 pod name>
+```
+12. pod 생성 확인
+```
+kubectl get pods -n springtest
+```
+13. 컨테이너 접속
+```
+kubectl exec -it <컨테이너ID> /bin/bash
+```
+14. sql 접속
+```
+psql -U knn -d dbtest
+```
+15. DB 테이블 접근
+```
+\c dbtest knn
+```
+16. 테이블 확인
+```
+\dt
 ```
